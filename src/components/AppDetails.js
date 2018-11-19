@@ -59,6 +59,12 @@ class AppDetails extends Component {
           <li className="collection-item">
             Short Description: {this.state.details.description_short}
           </li>
+          <li className="collection-item">
+            Short Description: {this.state.details.url}
+          </li>
+          <li className="collection-item">
+            Short Description: {this.state.details.repo_url}
+          </li>
         </ul>
         <Link className="btn" to={`/apps/edit/${this.state.details._id}`}>
           {" "}

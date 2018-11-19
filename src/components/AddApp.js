@@ -21,7 +21,8 @@ class AddApp extends Component {
       title: this.refs.title.value,
       description_long: this.refs.description_long.value,
       description_short: this.refs.description_short.value,
-      url: this.refs.url.value
+      url: this.refs.url.value,
+      repo_url: this.refs.repo_url.value
     };
     this.addApp(newApp);
     e.preventDefault();
@@ -56,6 +57,10 @@ class AddApp extends Component {
           <div className="input-field">
             <input type="text" name="url" ref="url" />
             <label htmlFor="url">URL</label>
+          </div>
+          <div className="input-field">
+            <input type="text" name="repo_url" ref="repo_url" />
+            <label htmlFor="repo_url">Repo URL</label>
           </div>
           <input type="submit" value="Save" className="btn" />
         </form>

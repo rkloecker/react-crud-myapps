@@ -10,7 +10,8 @@ class EditApp extends Component {
       title: "",
       description_long: "",
       description_short: "",
-      url: ""
+      url: "",
+      repo_url: ""
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -38,7 +39,8 @@ class EditApp extends Component {
             title: response.data.title,
             description_long: response.data.description_long,
             description_short: response.data.description_short,
-            url: response.data.url
+            url: response.data.url,
+            repo_url: response.data.repo_url
           },
           () => {
             // console.log(this.state);
@@ -67,7 +69,8 @@ class EditApp extends Component {
       title: this.refs.title.value,
       description_long: this.refs.description_long.value,
       description_short: this.refs.description_short.value,
-      url: this.refs.url.value
+      url: this.refs.url.value,
+      repo_url: this.refs.repo_url.value
     };
     // console.log("newapp", newApp);
     this.editApp(newApp);
@@ -136,8 +139,20 @@ class EditApp extends Component {
               value={this.state.url}
               onChange={this.handleInputChange}
             />
-            <label className="active" htmlFor="description_short">
+            <label className="active" htmlFor="url">
               url
+            </label>
+          </div>
+          <div className="input-field">
+            <input
+              type="text"
+              name="repo_url"
+              ref="repo_url"
+              value={this.state.repo_url}
+              onChange={this.handleInputChange}
+            />
+            <label className="active" htmlFor="repo_url">
+              Repo url
             </label>
           </div>
           <input type="submit" value="Save" className="btn" />
