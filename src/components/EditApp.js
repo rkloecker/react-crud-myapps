@@ -87,13 +87,14 @@ class EditApp extends Component {
   }
 
   render() {
+    console.log("rerendered!!");
     return (
       <div>
         <br />
         <Link className="btn grey" to="/">
           Back
         </Link>
-        <h1>Edit The brand new App</h1>
+        <h1 className="edit-header">Update App</h1>
         <form onSubmit={this.onSubmit.bind(this)}>
           <div className="input-field">
             <input
@@ -104,7 +105,7 @@ class EditApp extends Component {
               onChange={this.handleInputChange}
             />
             <label className="active" htmlFor="title">
-              title
+              App Title
             </label>
           </div>
           <div className="input-field">
@@ -116,7 +117,7 @@ class EditApp extends Component {
               onChange={this.handleInputChange}
             />
             <label className="active" htmlFor="description_long">
-              Long Description
+              App Description
             </label>
           </div>
           <div className="input-field">
@@ -128,7 +129,7 @@ class EditApp extends Component {
               onChange={this.handleInputChange}
             />
             <label className="active" htmlFor="description_short">
-              my short description
+              Used Technologies
             </label>
           </div>
           <div className="input-field">
@@ -140,7 +141,7 @@ class EditApp extends Component {
               onChange={this.handleInputChange}
             />
             <label className="active" htmlFor="url">
-              url
+              Deploy URL
             </label>
           </div>
           <div className="input-field">
@@ -152,7 +153,7 @@ class EditApp extends Component {
               onChange={this.handleInputChange}
             />
             <label className="active" htmlFor="repo_url">
-              Repo url
+              Git Repo URL
             </label>
           </div>
           <input type="submit" value="Save" className="btn" />

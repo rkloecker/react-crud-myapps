@@ -43,7 +43,7 @@ class AppDetails extends Component {
   }
 
   render() {
-    console.log("rendered");
+    // console.log("rendered");
     return (
       <div>
         <br />
@@ -52,18 +52,23 @@ class AppDetails extends Component {
         </Link>
         <h2>{this.state.details.title}</h2>
         <ul className="collection">
-          <li className="collection-item">URL: {this.state.details.url}</li>
           <li className="collection-item">
-            Long Description: {this.state.details.description_long}
+            <span className="desc">App Description: </span>
+            {this.state.details.description_long}
           </li>
           <li className="collection-item">
-            Short Description: {this.state.details.description_short}
+            <span className="desc">Used Technologies: </span>
+            {this.state.details.description_short}
           </li>
           <li className="collection-item">
-            Short Description: {this.state.details.url}
+            <span className="desc">Deploy URL: </span>
+            <a href={this.state.details.url}>{this.state.details.url}</a>
           </li>
           <li className="collection-item">
-            Short Description: {this.state.details.repo_url}
+            <span className="desc">Git Repo URL: </span>
+            <a href={this.state.details.repo_url}>
+              {this.state.details.repo_url}
+            </a>
           </li>
         </ul>
         <Link className="btn" to={`/apps/edit/${this.state.details._id}`}>
