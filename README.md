@@ -2,9 +2,9 @@
 
 ### crud app frontend for my deployed apps 
 
-### [Deployment with surge](http://react-list-myapps.surge.sh/)
+### [Deployment with surge](http://react-crud-myapps.surge.sh/)
 
-### Express Backend [Repo](https://github.com/rkloecker/express-deployed-apps) 
+### [Express Backend Repo](https://github.com/rkloecker/express-deployed-apps) 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
